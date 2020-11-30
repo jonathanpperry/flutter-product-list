@@ -16,7 +16,7 @@ class ProductsApp extends StatelessWidget {
           appBar: AppBar(
             title: Text("Product List"),
           ),
-          body: ProductManager(),
+          body: ProductManager("Food Tester"),
           ),
     );
   }

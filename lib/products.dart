@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 
 class Products extends StatelessWidget {
   final List<String> products;
-  Products(this.products);
+
+  Products(this.products) {
+    print("[Products Widget] Constructor");
+  }
+
   @override
   Widget build(BuildContext context) {
+    print("[Products Widget] build()");
     return Column(
       children: products
           .map((e) => Card(
@@ -12,7 +17,7 @@ class Products extends StatelessWidget {
                   children: [Image.asset("assets/beach.jpg"), Text(e)],
                 ),
               ))
-          .toList(), 
+          .toList(),
     );
   }
 }
