@@ -13,6 +13,11 @@ class ProductsApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Product List"),
         ),
+        body: Card(
+          child: Column(
+            children: [Image.asset("assets/beach.jpg"), Text("Food Paradise")],
+          ),
+        ),
       ),
     );
   }
