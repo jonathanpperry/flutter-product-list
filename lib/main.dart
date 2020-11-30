@@ -12,12 +12,16 @@ class ProductsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          brightness: Brightness.light,
+          primarySwatch: Colors.lightBlue,
+          accentColor: Colors.limeAccent),
       home: Scaffold(
-          appBar: AppBar(
-            title: Text("Product List"),
-          ),
-          body: ProductManager("Food Tester"),
-          ),
+        appBar: AppBar(
+          title: Text("Product List"),
+        ),
+        body: ProductManager(startingProduct: "Food Tester",),
+      ),
     );
   }
 }
